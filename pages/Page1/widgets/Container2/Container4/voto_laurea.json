@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultText": "{{elenco.selectedRow.voto_laurea_110}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dzqdi6u7ef",
+  "label": "Voto",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "maxNum": "110",
+  "minDynamicHeight": 4,
+  "minNum": "0",
+  "minWidth": 450,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 25,
+  "mobileRightColumn": 45,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "originalBottomRow": 22,
+  "originalTopRow": 15,
+  "parentColumnSpace": 6.8319091796875,
+  "parentId": "4ib3hcp1bq",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 9,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 8,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "ab4spvkzd3",
+  "widgetName": "voto_laurea"
+}
