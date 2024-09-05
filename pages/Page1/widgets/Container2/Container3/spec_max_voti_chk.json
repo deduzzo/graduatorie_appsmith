@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 26,
   "defaultCheckedState": "{{elenco.selectedRow.spec_max_voti.toLowerCase()}}",
   "dynamicBindingPathList": [
     {
@@ -28,7 +28,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "pt2j7o94jd",
-  "label": "Almeno 1 spec. con massimo dei voti",
+  "label": "Almeno 1 spec. massimo dei voti",
   "labelPosition": "Left",
   "leftColumn": 20,
   "maxDynamicHeight": 9000,
@@ -39,17 +39,17 @@
   "mobileRightColumn": 48,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
-  "originalTopRow": 18,
+  "originalBottomRow": 30,
+  "originalTopRow": 26,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "r40vnhmfqp",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
-  "topRow": 18,
+  "rightColumn": 56,
+  "topRow": 22,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
   "widgetId": "cxrve94mmm",
-  "widgetName": "Checkbox1"
+  "widgetName": "spec_max_voti_chk"
 }

@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_0b469435-2483-4904-a74b-642db0da03f2",
-  "id": "Page1_raw_data",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_ba8b1260-b04c-4581-955f-2542243c88de",
+  "id": "Page1_add",
   "pluginId": "google-sheets-plugin",
   "pluginType": "SAAS",
   "unpublishedAction": {
@@ -8,7 +8,7 @@
       "encodeParamsToggle": true,
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -23,10 +23,13 @@
           "data": []
         },
         "queryFormat": {
-          "data": "RANGE"
+          "data": "ROWS"
         },
         "range": {
-          "data": "A2:AT"
+          "data": ""
+        },
+        "rowObjects": {
+          "data": "{ \"cognome\" : {{codice_fiscale_txt.text.toUpperCase()}},\n\t\"nome\" : {{nome_txt.text.toUpperCase()}}\n}"
         },
         "sheetName": {
           "data": "test"
@@ -34,30 +37,16 @@
         "sheetUrl": {
           "componentData": "",
           "data": "https://docs.google.com/spreadsheets/d/1KiNNHCS3NrHThmqr03xnfkfZTqerk0t5iD1ME6bTFBQ",
-          "jsonData": "",
           "viewType": "json"
         },
         "smartSubstitution": {
           "data": true
-        },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
         },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "children": [
-              {
-                "condition": "LT"
-              }
-            ],
             "condition": "AND"
           }
         }
@@ -72,9 +61,13 @@
       "name": "graduatoria_base",
       "pluginId": "google-sheets-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.rowObjects.data"
+      }
+    ],
     "executeOnLoad": false,
-    "name": "raw_data",
+    "name": "add",
     "pageId": "Page1",
     "userSetOnLoad": false
   }

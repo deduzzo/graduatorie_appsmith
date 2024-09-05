@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{verificaDati.getErrore()}}",
+  "text": "{{dati.getErrore()}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 9,

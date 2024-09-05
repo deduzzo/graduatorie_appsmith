@@ -1,8 +1,8 @@
 {
   "gitSyncId": "66d58fbcb85ef160f28f7abd_0d842269-75ae-4806-9fd8-0eb6cb546196",
-  "id": "Page1_verificaDati",
+  "id": "Page1_dati",
   "unpublishedCollection": {
-    "name": "verificaDati",
+    "name": "dati",
     "pageId": "Page1",
     "pluginId": "js-plugin",
     "pluginType": "JS",

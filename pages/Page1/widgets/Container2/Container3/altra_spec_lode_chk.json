@@ -4,7 +4,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
-  "defaultCheckedState": "{{elenco.selectedRow.specializzazione_lode.toLowerCase()}}",
+  "defaultCheckedState": "{{elenco.selectedRow.seconda_spec_lode.toLowerCase()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -28,9 +28,9 @@
   "isRequired": false,
   "isVisible": true,
   "key": "pt2j7o94jd",
-  "label": "Spec. con lode",
+  "label": "ulter. spec. con lode",
   "labelPosition": "Left",
-  "leftColumn": 0,
+  "leftColumn": 20,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -39,17 +39,17 @@
   "mobileRightColumn": 48,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
+  "originalBottomRow": 23,
   "originalTopRow": 18,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "r40vnhmfqp",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 56,
   "topRow": 18,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
-  "widgetId": "zjltbmht5l",
-  "widgetName": "Checkbox1Copy"
+  "widgetId": "vzo6082d7d",
+  "widgetName": "altra_spec_lode_chk"
 }

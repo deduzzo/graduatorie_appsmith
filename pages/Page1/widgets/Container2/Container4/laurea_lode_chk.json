@@ -4,7 +4,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
-  "defaultCheckedState": "{{elenco.selectedRow.laurea_lode.toLocaleLowerCase()}}",
+  "defaultCheckedState": "{{elenco.selectedRow.laurea_lode.toLowerCase()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -39,8 +39,8 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
-  "originalTopRow": 2,
+  "originalBottomRow": 8,
+  "originalTopRow": 3,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "4ib3hcp1bq",
   "parentRowSpace": 10,
@@ -51,5 +51,5 @@
   "type": "CHECKBOX_WIDGET",
   "version": 1,
   "widgetId": "zodipk2pof",
-  "widgetName": "Checkbox2Copy"
+  "widgetName": "laurea_lode_chk"
 }

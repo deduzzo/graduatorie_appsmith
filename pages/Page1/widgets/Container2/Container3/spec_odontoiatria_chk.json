@@ -4,7 +4,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 11,
-  "defaultCheckedState": "{{elenco.selectedRow.prima_spec_branca_principale.toLocaleLowerCase()}}",
+  "defaultCheckedState": "{{elenco.selectedRow.spec_odontoiatria.toLocaleLowerCase()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -28,9 +28,9 @@
   "isRequired": false,
   "isVisible": true,
   "key": "pt2j7o94jd",
-  "label": "1° Spec. Branca PRINCIPALE",
+  "label": "Spec. Odontoiatria",
   "labelPosition": "Left",
-  "leftColumn": 0,
+  "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,10 +46,10 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 34,
+  "rightColumn": 58,
   "topRow": 7,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
-  "widgetId": "2ocou2vwkx",
-  "widgetName": "prima_spec_branca_chk"
+  "widgetId": "ytbnx1w5mb",
+  "widgetName": "spec_odontoiatria_chk"
 }

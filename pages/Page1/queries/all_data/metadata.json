@@ -29,7 +29,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "base"
+          "data": "test"
         },
         "sheetUrl": {
           "componentData": "",
@@ -78,7 +78,8 @@
             ],
             "condition": "OR"
           },
-          "data": "{{ elenco.searchText ? {\n    \"condition\": \"OR\",\n    \"children\": [\n        {\n            \"condition\": \"CONTAINS\",\n            \"key\": \"cognome\",\n            \"value\": elenco.searchText\n        },\n        {\n            \"key\": \"nome\",\n            \"condition\": \"CONTAINS\",\n            \"value\": elenco.searchText\n        }\n    ]\n} : {} }}",
+          "data": "{}",
+          "jsonData": "",
           "viewType": "json"
         }
       },
@@ -95,9 +96,6 @@
     "dynamicBindingPathList": [
       {
         "key": "formData.pagination.data.offset"
-      },
-      {
-        "key": "formData.where.data"
       },
       {
         "key": "formData.pagination.data.limit"

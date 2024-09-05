@@ -1,5 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": true,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "1.5rem",
@@ -31,14 +32,11 @@
     }
   },
   "columnOrder": [
-    "id",
     "cognome",
     "nome",
     "data_nascita",
     "indirizzo",
     "citta",
-    "telefono_casa",
-    "telefono_studio",
     "cellulare",
     "email",
     "branca",
@@ -79,9 +77,10 @@
     "servizio_2024",
     "rowIndex",
     "codice_fiscale",
-    "pec"
+    "pec",
+    "spec_odontoiatria"
   ],
-  "columnUpdatedAt": 1725460581660,
+  "columnUpdatedAt": 1725535052204,
   "columnWidthMap": {
     "data_nascita": 133
   },
@@ -102,9 +101,6 @@
       "key": "boxShadow"
     },
     {
-      "key": "primaryColumns.id.computedValue"
-    },
-    {
       "key": "primaryColumns.cognome.computedValue"
     },
     {
@@ -118,12 +114,6 @@
     },
     {
       "key": "primaryColumns.citta.computedValue"
-    },
-    {
-      "key": "primaryColumns.telefono_casa.computedValue"
-    },
-    {
-      "key": "primaryColumns.telefono_studio.computedValue"
     },
     {
       "key": "primaryColumns.cellulare.computedValue"
@@ -247,10 +237,17 @@
     },
     {
       "key": "primaryColumns.pec.computedValue"
+    },
+    {
+      "key": "primaryColumns.spec_odontoiatria.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -271,6 +268,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
+  "onRowSelected": "",
   "originalBottomRow": 29,
   "originalTopRow": 1,
   "parentId": "0",
@@ -576,40 +574,6 @@
       "label": "email",
       "notation": "standard",
       "originalId": "email",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "id": {
-      "alias": "id",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "id",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "id",
-      "notation": "standard",
-      "originalId": "id",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -1706,6 +1670,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "spec_odontoiatria": {
+      "alias": "spec_odontoiatria",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"spec_odontoiatria\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "spec_odontoiatria",
+      "index": 19,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "spec_odontoiatria",
+      "notation": "standard",
+      "originalId": "spec_odontoiatria",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "specializzazione_lode": {
       "alias": "specializzazione_lode",
       "allowCellWrapping": false,
@@ -1766,74 +1764,6 @@
       "label": "su_110",
       "notation": "standard",
       "originalId": "su_110",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "telefono_casa": {
-      "alias": "telefono_casa",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"telefono_casa\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "telefono_casa",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "telefono_casa",
-      "notation": "standard",
-      "originalId": "telefono_casa",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "telefono_studio": {
-      "alias": "telefono_studio",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"telefono_studio\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "telefono_studio",
-      "index": 7,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "telefono_studio",
-      "notation": "standard",
-      "originalId": "telefono_studio",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

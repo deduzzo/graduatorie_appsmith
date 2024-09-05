@@ -56,7 +56,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 44,
+  "rightColumn": 45,
   "serverSideFiltering": false,
   "sourceData": "{{branche.data}}",
   "topRow": 1,
