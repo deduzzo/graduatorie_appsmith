@@ -1,0 +1,33 @@
+{
+  "animateLoading": true,
+  "bottomRow": 125,
+  "docUrl": "{{ utilsClass.pdfReport()}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "docUrl"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "15e51zc96r",
+  "leftColumn": 16,
+  "mobileBottomRow": 125,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 85,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16.78125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "topRow": 85,
+  "type": "DOCUMENT_VIEWER_WIDGET",
+  "version": 1,
+  "widgetId": "rcn4lxl84r",
+  "widgetName": "DocumentViewer1"
+}

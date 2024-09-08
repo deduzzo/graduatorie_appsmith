@@ -4,7 +4,16 @@
     "appPositioning": {
       "type": "FIXED"
     },
-    "navigationSetting": {},
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": true
+    },
     "themeSetting": {
       "appMaxWidth": "LARGE",
       "density": 1.0,
@@ -14,11 +23,20 @@
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
   "color": "#FFDEDE",
+  "embedSetting": {
+    "height": "720px",
+    "showNavigationBar": false,
+    "width": "1024px"
+  },
   "evaluationVersion": 2,
   "icon": "hospital",
   "pages": [
     {
-      "id": "Page1",
+      "id": "Authentication",
+      "isDefault": false
+    },
+    {
+      "id": "MainPage",
       "isDefault": true
     }
   ],
@@ -26,7 +44,16 @@
     "appPositioning": {
       "type": "FIXED"
     },
-    "navigationSetting": {},
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": true
+    },
     "themeSetting": {
       "appMaxWidth": "LARGE",
       "density": 1.0,

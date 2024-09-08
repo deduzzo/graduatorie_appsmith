@@ -1,0 +1,55 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 23,
+  "defaultCheckedState": "{{elenco.selectedRow.seconda_spec_lode.toLowerCase()}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultCheckedState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultCheckedState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "pt2j7o94jd",
+  "label": "ulter. spec. con lode",
+  "labelPosition": "Left",
+  "leftColumn": 20,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 36,
+  "mobileRightColumn": 48,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "originalBottomRow": 23,
+  "originalTopRow": 19,
+  "parentColumnSpace": 6.8319091796875,
+  "parentId": "r40vnhmfqp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 56,
+  "topRow": 19,
+  "type": "CHECKBOX_WIDGET",
+  "version": 1,
+  "widgetId": "vzo6082d7d",
+  "widgetName": "altra_spec_lode_chk"
+}

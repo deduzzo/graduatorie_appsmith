@@ -1,0 +1,19 @@
+{ items: [
+	{
+	"branca" : "Prova1", 
+	"subItems": 
+	[
+		{"nome": "nome1", "cognome": "cognome2", "punteggio": 10},
+		{"nome": "nome2", "cognome": "cognome2", "punteggio": 11}
+],
+	},
+	{
+	"branca" : "Prova2", 
+	"subItems": 
+	[
+		{"nome": "nome3", "cognome": "cognome3", "punteggio": 14},
+		{"nome": "nome4", "cognome": "cognome4", "punteggio": 15}
+	],
+	}
+ ] 
+}
