@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_dbcebb7c-a43b-4ec0-a230-4f932336be22",
-  "id": "MainPage_utilsClass.calcolaPunteggio",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_558b3857-0ff1-4aea-a80e-40fe8c0762f6",
+  "id": "MainPage_utilsClass.ordinaDatiGraduatoria",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,14 +8,12 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "riga",
-          "value": "{{currentRow}}"
+          "name": "dati"
         }
       ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "MainPage_utilsClass",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -29,8 +27,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utilsClass.calcolaPunteggio",
-    "name": "calcolaPunteggio",
+    "fullyQualifiedName": "utilsClass.ordinaDatiGraduatoria",
+    "name": "ordinaDatiGraduatoria",
     "pageId": "MainPage",
     "userSetOnLoad": false
   }

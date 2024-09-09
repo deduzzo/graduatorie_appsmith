@@ -1,21 +1,15 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_dbcebb7c-a43b-4ec0-a230-4f932336be22",
-  "id": "MainPage_utilsClass.calcolaPunteggio",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_744bfbbc-d09e-4aa5-a58d-d9767c75ef9d",
+  "id": "MainPage_utilsClass.clickReportButton",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [
-        {
-          "name": "riga",
-          "value": "{{currentRow}}"
-        }
-      ],
+      "jsArguments": [],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "MainPage_utilsClass",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -29,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utilsClass.calcolaPunteggio",
-    "name": "calcolaPunteggio",
+    "fullyQualifiedName": "utilsClass.clickReportButton",
+    "name": "clickReportButton",
     "pageId": "MainPage",
     "userSetOnLoad": false
   }

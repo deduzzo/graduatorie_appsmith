@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_dbcebb7c-a43b-4ec0-a230-4f932336be22",
-  "id": "MainPage_utilsClass.calcolaPunteggio",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_82f21aa8-c957-471a-8683-7e939e7b1dee",
+  "id": "MainPage_utilsClass.inserisciInGraduatoria",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,14 +8,15 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "riga",
-          "value": "{{currentRow}}"
+          "name": "lista"
+        },
+        {
+          "name": "specialista"
         }
       ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "MainPage_utilsClass",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -29,8 +30,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utilsClass.calcolaPunteggio",
-    "name": "calcolaPunteggio",
+    "fullyQualifiedName": "utilsClass.inserisciInGraduatoria",
+    "name": "inserisciInGraduatoria",
     "pageId": "MainPage",
     "userSetOnLoad": false
   }

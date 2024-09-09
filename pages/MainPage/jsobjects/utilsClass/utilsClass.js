@@ -1,8 +1,7 @@
 export default {
-	calcolaPunteggio (currentRow) {
+	calcolaPunteggio (riga = currentRow) {
 		const annoMin = 2003;
 		const annoMax = 2026;
-		let riga = currentRow;
 		let punteggio = 0.0;
 		let descrizione = "";
 		// LAUREA
@@ -37,7 +36,7 @@ export default {
 		
 		// VOTO DI SPECIALIZZAZIONE
 		// con lode (una sola volta) 
-		if (riga.specializzazione_lode === "TRUE") {
+		if (riga.specializzazione_lode === "TRUE" || riga.seconda_spec_lode === "TRUE") {
 			punteggio+= 3;
 			descrizione+= "Specializzazione con lode (una sola volta) -> +3 punti  <br />";
 		}
@@ -67,7 +66,7 @@ export default {
 		let dati = {};
 		let dati2 = {
 			"Allergologia": [
-					{ numero: 1, punteggio: 85, cognome: "Rossi", nome: "Mario" },
+					{ numero: 1, punteggio: 85, cognome: "Rossi", nome: "Mario",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment() },
 					{ numero: 2, punteggio: 80, cognome: "Bianchi", nome: "Luca" }
 			],
 			"Audiologia": [
@@ -76,73 +75,143 @@ export default {
 			]
 		};
 		let allData = await raw_data.data;
-		let quanti = allData.length.toString();
-		Text10.setText(quanti);
-		return dati2;
+		for (let i=0; i<allData.length; i++) {
+			if (!dati.hasOwnProperty(allData[i].branca))
+				dati[allData[i].branca] = [];
+			dati[allData[i].branca] = this.inserisciInGraduatoria(dati[allData[i].branca], allData[i]);
+		}
+		return this.ordinaDatiGraduatoria(dati);
+	},
+	ordinaDatiGraduatoria(dati) {
+    // Ordina le chiavi (branche) in ordine alfabetico
+    let chiaviOrdinate = Object.keys(dati).sort();
+
+    // Crea un nuovo oggetto con le chiavi ordinate
+    let datiOrdinati = {};
+
+    chiaviOrdinate.forEach(chiave => {
+        // Ordina gli elementi della graduatoria in base ai criteri richiesti
+        datiOrdinati[chiave] = dati[chiave].sort((a, b) => {
+            // 1. Confronta il punteggio (decrescente)
+            if (b.punteggio !== a.punteggio) {
+                return b.punteggio - a.punteggio;
+            }
+
+            // 2. Confronta l'anzianità di specializzazione (data più vecchia precede)
+            if (moment(a.data_specializzazione).isBefore(b.data_specializzazione)) {
+                a.note = "precede per anzianità di specializzazione";
+                b.note = "segue per anzianità di specializzazione";
+                return -1;
+            }
+            if (moment(b.data_specializzazione).isBefore(a.data_specializzazione)) {
+                a.note = "segue per anzianità di specializzazione";
+                b.note = "precede per anzianità di specializzazione";
+                return 1;
+            }
+
+            // 3. Confronta la data di laurea (data più vecchia precede)
+            if (moment(a.data_laurea).isBefore(b.data_laurea)) {
+                a.note = "precede per anzianità di laurea";
+                b.note = "segue per anzianità di laurea";
+                return -1;
+            }
+            if (moment(b.data_laurea).isBefore(a.data_laurea)) {
+                a.note = "segue per anzianità di laurea";
+                b.note = "precede per anzianità di laurea";
+                return 1;
+            }
+
+            // 4. Confronta la data di nascita (più giovane prevale)
+            if (moment(a.data_nascita).isAfter(b.data_nascita)) {
+                a.note = "precede per età";
+                b.note = "segue per età";
+                return -1;
+            }
+            if (moment(b.data_nascita).isAfter(a.data_nascita)) {
+                a.note = "segue per età";
+                b.note = "precede per età";
+                return 1;
+            }
+
+            // Se sono esattamente uguali in tutti i criteri
+            return 0;
+        });
+    });
+
+    return datiOrdinati;
+},
+	inserisciInGraduatoria(lista, specialista) {
+		let tempData = {
+			numero: 0,
+			punteggio: this.calcolaPunteggio(specialista).punteggio,
+			cognome: specialista.cognome,
+			nome: specialista.nome,
+			data_specializzazione: moment(specialista.data_specializzazione,"YYYY-MM-DD"),
+			data_laurea:  moment(specialista.data_laurea,"YYYY-MM-DD"),
+			data_nascita:  moment(specialista.data_nascita,"YYYY-MM-DD"),
+			note: "",
+		}
+		return [...lista, tempData];
 	},
 	
-	async pdfReport() {
-		const doc = jspdf.jsPDF();
-		const dati = await this.datiGraduatoria();
-    
-     let y = 20; // Posizione iniziale verticale
+async pdfReport() {
+    const doc = jspdf.jsPDF();
+    const dati = await this.datiGraduatoria();
 
     // Aggiungi un titolo all'inizio
     doc.setFontSize(18);
     doc.setTextColor(40, 40, 40);
-    doc.text("Graduatoria Specialistica", 105, y, null, null, 'center');
-    y += 10;
-
+    doc.text("Graduatoria Specialistica", 105, 20, null, null, 'center');
+    
+    // Aggiungi la data
     doc.setFontSize(14);
     doc.setTextColor(100);
-    doc.text("Generato il " + moment().format("DD/MM/YYYY HH:mm"), 105, y, null, null, 'center');
-    y += 20;
+    doc.text("Generato il " + moment().format("DD/MM/YYYY HH:mm"), 105, 30, null, null, 'center');
+    
+    // Crea un array di dati per la tabella
+    let finalData = [];
 
-    // Ciclo per ogni branca nel tuo oggetto dati
+    // Ciclo attraverso ogni branca nel tuo oggetto dati
     Object.keys(dati).forEach(branchia => {
-        // Titolo della branchia (es: Allergologia)
-        doc.setFontSize(16);
-        doc.setTextColor(0, 0, 128); // Colore blu per il titolo della branchia
-        doc.text(branchia, 10, y);
-        y += 10;
+        // Aggiungi il nome della branchia come titolo
+        finalData.push([{content: branchia, colSpan: 4, styles: { halign: 'center', fillColor: [220, 220, 220] }}]);
+        
+        // Aggiungi l'intestazione per ogni branchia (più piccola)
+        finalData.push([{content: 'Num.', styles: { fontSize: 10 }}, {content: 'Punteggio', styles: { fontSize: 10 }},
+                        {content: 'Cognome e Nome', styles: { fontSize: 10 }}, {content: 'Note', styles: { fontSize: 10 }}]);
 
-        // Intestazione della tabella
-        doc.setFontSize(12);
-        doc.setTextColor(0);
-        doc.text("Num.", 10, y);
-        doc.text("Punteggio", 40, y);
-        doc.text("Cognome e Nome", 80, y);
-        y += 8;
-
-        // Linea orizzontale sotto l'intestazione della tabella
-        doc.setDrawColor(0);
-        doc.line(10, y, 200, y); // Lunghezza linea
-        y += 5;
-
-        // Dati della tabella
+        // Aggiungi i dati della tabella
         dati[branchia].forEach(item => {
-            doc.text(item.numero.toString(), 10, y);
-            doc.text(item.punteggio.toString(), 40, y);
-            doc.text(`${item.cognome} ${item.nome}`, 80, y);
-            y += 8;
-
-            // Controllo se abbiamo superato lo spazio di una pagina
-            if (y > 270) {
-                doc.addPage();
-                y = 20;
-            }
+            finalData.push([
+                item.numero.toString(), 
+                item.punteggio.toString(), 
+                `${item.cognome} ${item.nome}`,
+                item.note || ""  // Aggiungi le note se presenti
+            ]);
         });
-
-        y += 10; // Spazio tra una branchia e l'altra
     });
 
-    // Footer con numero di pagina
-    const totalPages = doc.internal.getNumberOfPages();
-    for (let i = 1; i <= totalPages; i++) {
-        doc.setPage(i);
-        doc.setFontSize(10);
-        doc.text(`Pagina ${i} di ${totalPages}`, 200 - 30, 290); // Posizionato in basso a destra
-    }
-		reportGraduatoria.setURL(doc.output("dataurlstring"));
-	}
+    // Usa autoTable per creare la tabella
+    doc.autoTable({
+
+        body: finalData, // Dati della tabella
+        startY: 40, // Posizione iniziale della tabella
+        theme: 'grid', // Stile della tabella
+        styles: { fontSize: 10 }, // Stile generale della tabella
+        headStyles: { fillColor: [0, 0, 128] }, // Stile dell'intestazione
+        didDrawPage: function (data) {
+            // Aggiungi il numero di pagina in basso ad ogni pagina
+            const pageCount = doc.internal.getNumberOfPages();
+            doc.setFontSize(10);
+            doc.text(`Pagina ${data.pageNumber} di ${pageCount}`, 200 - 30, 290); // Posiziona in basso a destra
+        }
+    });
+
+    return doc.output("dataurlstring");
+},
+	async clickReportButton() {
+		showModal(ModalGraduatoriaPdf.name);
+		let data2 = await utilsClass.pdfReport();
+		reportGraduatoria.setURL(data2);
+	},
 }
