@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_16173c62-7bf1-49ec-99c4-57fad2490710",
-  "id": "MainPage_utilsClass.clickReportButton2",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_6922ea17-a0ca-4933-a3e4-f0de89097580",
+  "id": "MainPage_utilsClass.showData",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -23,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utilsClass.clickReportButton2",
-    "name": "clickReportButton2",
+    "fullyQualifiedName": "utilsClass.showData",
+    "name": "showData",
     "pageId": "MainPage",
     "userSetOnLoad": false
   }

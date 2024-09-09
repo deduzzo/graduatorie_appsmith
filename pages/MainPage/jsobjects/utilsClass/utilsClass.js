@@ -62,7 +62,7 @@ export default {
 		return parseFloat(dato.replace(",","."));
 	},
 	
-	async datiGraduatoria() {
+	async datiGraduatoria(allData) {
 		let dati = {};
 		let dati2 = {
 			"Allergologia": [
@@ -74,7 +74,6 @@ export default {
 					{ numero: 2, punteggio: 88, cognome: "Neri", nome: "Anna" }
 			]
 		};
-		let allData = await all_data.data;
 		for (let i=0; i<allData.length; i++) {
 			if (!dati.hasOwnProperty(allData[i].branca))
 				dati[allData[i].branca] = [];
@@ -190,19 +189,36 @@ async pdfReport(dati) {
         });
     });
 
+    // Usa autoTable per creare la tabella
+	/*
+    doc.autoTable({
 
-
+        body: finalData, // Dati della tabella
+        startY: 40, // Posizione iniziale della tabella
+        theme: 'grid', // Stile della tabella
+        styles: { fontSize: 10 }, // Stile generale della tabella
+        headStyles: { fillColor: [0, 0, 128] }, // Stile dell'intestazione
+        didDrawPage: function (data) {
+            // Aggiungi il numero di pagina in basso ad ogni pagina
+            const pageCount = doc.internal.getNumberOfPages();
+            doc.setFontSize(10);
+            doc.text(`Pagina ${data.pageNumber} di ${pageCount}`, 200 - 30, 290); // Posiziona in basso a destra
+        }
+    });
+*/
     return doc.output("dataurlstring");
 },
-	async clickReportButton() {
-		const dati = await this.datiGraduatoria();
-		let data2 = await this.pdfReport(dati);
-		reportGraduatoria.setURL(data2);
-		showModal(ModalGraduatoriaPdf.name);
+	clickReportButton() {
+		const allData =  all_data.data;
+	  Text11.setText(JSON.stringify(allData));
+		//const dati = await this.datiGraduatoria(allData);
+		//let data2 = await this.pdfReport(dati);
+		//reportGraduatoria.setURL(data2);
+		//showModal(ModalGraduatoriaPdf.name);
 	},
-	
-	clickReportButton2() {
-		const dati = all_data.data;
-		Text11.setText(dati.length.toString());
+	showData() {
+		 const numeroRecord = raw_data.data.length;
+        // Mostra il numero di record su Text11
+        return numeroRecord.toString();
 	},
 }
