@@ -190,21 +190,7 @@ async pdfReport(dati) {
         });
     });
 
-    // Usa autoTable per creare la tabella
-    doc.autoTable({
 
-        body: finalData, // Dati della tabella
-        startY: 40, // Posizione iniziale della tabella
-        theme: 'grid', // Stile della tabella
-        styles: { fontSize: 10 }, // Stile generale della tabella
-        headStyles: { fillColor: [0, 0, 128] }, // Stile dell'intestazione
-        didDrawPage: function (data) {
-            // Aggiungi il numero di pagina in basso ad ogni pagina
-            const pageCount = doc.internal.getNumberOfPages();
-            doc.setFontSize(10);
-            doc.text(`Pagina ${data.pageNumber} di ${pageCount}`, 200 - 30, 290); // Posiziona in basso a destra
-        }
-    });
 
     return doc.output("dataurlstring");
 },
