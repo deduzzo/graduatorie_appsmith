@@ -31,7 +31,7 @@
   "mobileRightColumn": 23,
   "mobileTopRow": 39,
   "needsErrorInfo": false,
-  "onClick": "{{utilsClass.clickReportButton2();}}",
+  "onClick": "{{utilsClass.showData();}}",
   "originalBottomRow": 43,
   "originalTopRow": 39,
   "parentColumnSpace": 11.9892578125,

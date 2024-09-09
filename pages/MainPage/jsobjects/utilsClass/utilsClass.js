@@ -217,8 +217,9 @@ async pdfReport(dati) {
 		//showModal(ModalGraduatoriaPdf.name);
 	},
 	showData() {
-		 const numeroRecord = raw_data.data.length;
-        // Mostra il numero di record su Text11
-        return numeroRecord.toString();
+		Text11.setText("Inizio");
+		 const numeroRecord = raw_data.data;
+		setTimeout(2000);
+		 Text11.setText(numeroRecord.length.toString());
 	},
 }

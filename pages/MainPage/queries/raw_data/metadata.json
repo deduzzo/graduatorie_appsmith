@@ -72,7 +72,7 @@
       "pluginId": "google-sheets-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "raw_data",
     "pageId": "MainPage",
     "userSetOnLoad": false
