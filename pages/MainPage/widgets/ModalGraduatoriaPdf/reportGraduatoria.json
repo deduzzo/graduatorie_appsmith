@@ -1,8 +1,9 @@
 {
   "animateLoading": true,
   "bottomRow": 58,
-  "docUrl": "https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-file.pdf",
+  "docUrl": "",
   "dynamicBindingPathList": [],
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "isCanvas": false,
   "isLoading": false,
