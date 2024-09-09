@@ -191,7 +191,7 @@ pdfReport(dati) {
 
     // Usa autoTable per creare la tabella
 	
-    doc.autoTable({
+    jspdf_autotable.default(doc,{
 
         body: finalData, // Dati della tabella
         startY: 40, // Posizione iniziale della tabella
