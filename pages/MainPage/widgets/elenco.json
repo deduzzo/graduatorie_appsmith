@@ -1903,7 +1903,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 40,
+  "rightColumn": 35,
   "searchKey": "",
   "tableData": "{{all_data.data}}",
   "textSize": "0.875rem",
