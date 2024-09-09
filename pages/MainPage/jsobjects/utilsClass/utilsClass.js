@@ -141,7 +141,6 @@ export default {
 },
 	inserisciInGraduatoria(lista, specialista) {
 		let tempData = {
-			numero: 0,
 			punteggio: this.calcolaPunteggio(specialista).punteggio,
 			cognome: specialista.cognome,
 			nome: specialista.nome,
@@ -171,21 +170,27 @@ pdfReport(dati) {
 
     // Ciclo attraverso ogni branca nel tuo oggetto dati
     Object.keys(dati).forEach(branchia => {
+			let index = 1;
         // Aggiungi il nome della branchia come titolo
         finalData.push([{content: branchia, colSpan: 4, styles: { halign: 'center', fillColor: [220, 220, 220] }}]);
         
         // Aggiungi l'intestazione per ogni branchia (più piccola)
-        finalData.push([{content: 'Num.', styles: { fontSize: 10 }}, {content: 'Punteggio', styles: { fontSize: 10 }},
-                        {content: 'Cognome e Nome', styles: { fontSize: 10 }}, {content: 'Note', styles: { fontSize: 10 }}]);
+        finalData.push([
+					{content: '#POS', styles: { fontSize: 10 }},
+          {content: 'Cognome e Nome', styles: { fontSize: 10 }},
+					{content: 'Punteggio', styles: { fontSize: 10 }},
+					{content: 'Note', styles: { fontSize: 10 }}
+				]);
 
         // Aggiungi i dati della tabella
         dati[branchia].forEach(item => {
             finalData.push([
-                item.numero.toString(), 
-                item.punteggio.toString(), 
+                index.toString(), 
                 `${item.cognome} ${item.nome}`,
+							  item.punteggio.toString(), 
                 item.note || ""  // Aggiungi le note se presenti
             ]);
+					index++;
         });
     });
 
