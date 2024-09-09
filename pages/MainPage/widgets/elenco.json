@@ -35,11 +35,12 @@
     "cognome",
     "nome",
     "data_nascita",
+    "branca",
+    "customColumn1",
     "indirizzo",
     "citta",
     "cellulare",
     "email",
-    "branca",
     "data_laurea",
     "su_110",
     "laurea_lode",
@@ -77,13 +78,13 @@
     "codice_fiscale",
     "pec",
     "spec_odontoiatria",
-    "customColumn1",
     "voto_laurea"
   ],
-  "columnUpdatedAt": 1725874331396,
+  "columnUpdatedAt": 1725881805339,
   "columnWidthMap": {
+    "branca": 257,
     "customColumn1": 119,
-    "data_nascita": 133
+    "data_nascita": 126
   },
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
