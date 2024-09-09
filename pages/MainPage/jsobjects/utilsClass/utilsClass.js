@@ -62,16 +62,16 @@ export default {
 		return parseFloat(dato.replace(",","."));
 	},
 	
-	async datiGraduatoria(allData) {
+	datiGraduatoria(allData) {
 		let dati = {};
 		let dati2 = {
 			"Allergologia": [
 					{ numero: 1, punteggio: 85, cognome: "Rossi", nome: "Mario",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment() },
-					{ numero: 2, punteggio: 80, cognome: "Bianchi", nome: "Luca" }
+					{ numero: 2, punteggio: 80, cognome: "Bianchi", nome: "Luca",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment()  }
 			],
 			"Audiologia": [
-					{ numero: 1, punteggio: 90, cognome: "Verdi", nome: "Giulia" },
-					{ numero: 2, punteggio: 88, cognome: "Neri", nome: "Anna" }
+					{ numero: 1, punteggio: 90, cognome: "Verdi", nome: "Giulia",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment()  },
+					{ numero: 2, punteggio: 88, cognome: "Neri", nome: "Anna",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment()  }
 			]
 		};
 		for (let i=0; i<allData.length; i++) {
@@ -153,7 +153,7 @@ export default {
 		return [...lista, tempData];
 	},
 	
-async pdfReport(dati) {
+pdfReport(dati) {
     const doc = jspdf.jsPDF();
 
     // Aggiungi un titolo all'inizio
@@ -190,7 +190,7 @@ async pdfReport(dati) {
     });
 
     // Usa autoTable per creare la tabella
-	/*
+	
     doc.autoTable({
 
         body: finalData, // Dati della tabella
@@ -205,7 +205,7 @@ async pdfReport(dati) {
             doc.text(`Pagina ${data.pageNumber} di ${pageCount}`, 200 - 30, 290); // Posiziona in basso a destra
         }
     });
-*/
+
     return doc.output("dataurlstring");
 },
 	clickReportButton() {
@@ -217,9 +217,11 @@ async pdfReport(dati) {
 		//showModal(ModalGraduatoriaPdf.name);
 	},
 	showData() {
-		Text11.setText("Inizio");
-		 const numeroRecord = all_data.data;
-		setTimeout(2000);
-		 Text11.setText(numeroRecord.length.toString());
+	  const allData = all_data.data;
+		const dati = this.datiGraduatoria(allData);
+		Text11.setText(JSON.stringify(dati));
+		let data2 = this.pdfReport(dati);
+		reportGraduatoria.setURL(data2);
+		showModal(ModalGraduatoriaPdf.name);
 	},
 }
