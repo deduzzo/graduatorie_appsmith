@@ -216,7 +216,7 @@ async pdfReport(dati) {
 	},
 	
 	clickReportButton2() {
-		const dati = raw_data.data;
+		const dati = all_data.data;
 		Text11.setText(dati.length.toString());
 	},
 }
