@@ -74,7 +74,7 @@ export default {
 					{ numero: 2, punteggio: 88, cognome: "Neri", nome: "Anna" }
 			]
 		};
-		let allData = await raw_data.data;
+		let allData = await all_data.data;
 		for (let i=0; i<allData.length; i++) {
 			if (!dati.hasOwnProperty(allData[i].branca))
 				dati[allData[i].branca] = [];
