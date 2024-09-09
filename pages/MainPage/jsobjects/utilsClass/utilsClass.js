@@ -214,4 +214,9 @@ async pdfReport(dati) {
 		reportGraduatoria.setURL(data2);
 		showModal(ModalGraduatoriaPdf.name);
 	},
+	
+	clickReportButton2() {
+		const dati = raw_data.data;
+		Text11.setText(dati.length.toString());
+	},
 }
