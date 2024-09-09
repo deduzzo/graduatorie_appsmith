@@ -218,7 +218,7 @@ async pdfReport(dati) {
 	},
 	showData() {
 		Text11.setText("Inizio");
-		 const numeroRecord = raw_data.data;
+		 const numeroRecord = all_data.data;
 		setTimeout(2000);
 		 Text11.setText(numeroRecord.length.toString());
 	},
