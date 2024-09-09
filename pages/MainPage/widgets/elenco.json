@@ -80,7 +80,7 @@
     "customColumn1",
     "voto_laurea"
   ],
-  "columnUpdatedAt": 1725781096402,
+  "columnUpdatedAt": 1725874331396,
   "columnWidthMap": {
     "customColumn1": 119,
     "data_nascita": 133
@@ -494,7 +494,7 @@
       "label": "punteggio",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{ \nmodalPunteggioTitolo.setText(\"Dettaglio punteggio \" + currentRow.cognome + \" \" + currentRow.nome)\nModalPunteggioCorpo.setText(utilsClass.calcolaPunteggio(currentRow).descrizione)\nshowModal(ModalPunteggio.name)}}",
+      "onClick": "{{\nmodalPunteggioTitolo.setText(\"Dettaglio punteggio \" + currentRow.cognome + \" \" + currentRow.nome)\nModalPunteggioCorpo.setText(utilsClass.calcolaPunteggio(currentRow).descrizione)\n\nModalPunteggioTotale.setText(utilsClass.calcolaPunteggio(currentRow).punteggio.toString())\n\nshowModal(ModalPunteggio.name)}}/",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -1853,7 +1853,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "voto_laurea",
       "notation": "standard",
       "originalId": "voto_laurea",

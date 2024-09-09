@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_971273ea-9a77-4bcd-b48d-860b3255c3f1",
-  "id": "MainPage_utilsClass.pdfReport",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_48923144-69f8-4ec4-833c-ce206dbb4d52",
+  "id": "MainPage_utilsClass.sostituzioniToDouble",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "dato",
+          "value": ""
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -23,8 +28,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utilsClass.pdfReport",
-    "name": "pdfReport",
+    "fullyQualifiedName": "utilsClass.sostituzioniToDouble",
+    "name": "sostituzioniToDouble",
     "pageId": "MainPage",
     "userSetOnLoad": false
   }

@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66d58fbcb85ef160f28f7abd_b59979ba-f148-4d55-9be6-9ddb21d8ac60",
-  "id": "MainPage_utilsClass.report",
+  "gitSyncId": "66d58fbcb85ef160f28f7abd_57edb97d-9ba5-45e6-a550-aebdd8026d68",
+  "id": "MainPage_utilsClass.datiGraduatoria",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -23,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utilsClass.report",
-    "name": "report",
+    "fullyQualifiedName": "utilsClass.datiGraduatoria",
+    "name": "datiGraduatoria",
     "pageId": "MainPage",
     "userSetOnLoad": false
   }

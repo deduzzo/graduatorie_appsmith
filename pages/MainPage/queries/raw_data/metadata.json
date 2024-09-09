@@ -26,7 +26,7 @@
           "data": "RANGE"
         },
         "range": {
-          "data": "A2:AT"
+          "data": "A2:AS"
         },
         "sheetName": {
           "data": "test"
@@ -73,7 +73,7 @@
       "pluginId": "google-sheets-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "name": "raw_data",
     "pageId": "MainPage",
     "userSetOnLoad": false

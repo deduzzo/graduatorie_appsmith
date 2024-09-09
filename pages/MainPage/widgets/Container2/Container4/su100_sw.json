@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignWidget": "RIGHT",
   "animateLoading": true,
-  "bottomRow": 15,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultSwitchState": "{{elenco.selectedRow.su_110.toLowerCase()}}",
   "dynamicBindingPathList": [
@@ -43,7 +43,7 @@
   "mobileTopRow": 14,
   "needsErrorInfo": false,
   "onChange": "",
-  "originalBottomRow": 15,
+  "originalBottomRow": 14,
   "originalTopRow": 10,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "4ib3hcp1bq",

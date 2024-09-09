@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "bottomRow": 125,
-  "docUrl": "{{ utilsClass.pdfReport()}}",
+  "docUrl": "{{ utilsClass.pdfReport()}}/",
   "dynamicBindingPathList": [
     {
       "key": "docUrl"
@@ -29,5 +29,5 @@
   "type": "DOCUMENT_VIEWER_WIDGET",
   "version": 1,
   "widgetId": "rcn4lxl84r",
-  "widgetName": "DocumentViewer1"
+  "widgetName": "reportGraduatoria"
 }
