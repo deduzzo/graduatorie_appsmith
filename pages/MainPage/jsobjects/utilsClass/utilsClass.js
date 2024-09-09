@@ -154,9 +154,8 @@ export default {
 		return [...lista, tempData];
 	},
 	
-async pdfReport() {
+async pdfReport(dati) {
     const doc = jspdf.jsPDF();
-    const dati = await this.datiGraduatoria();
 
     // Aggiungi un titolo all'inizio
     doc.setFontSize(18);
@@ -210,7 +209,8 @@ async pdfReport() {
     return doc.output("dataurlstring");
 },
 	async clickReportButton() {
-		let data2 = await this.pdfReport();
+		const dati = await this.datiGraduatoria();
+		let data2 = await this.pdfReport(dati);
 		reportGraduatoria.setURL(data2);
 		showModal(ModalGraduatoriaPdf.name);
 	},
