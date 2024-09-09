@@ -209,17 +209,8 @@ pdfReport(dati) {
     return doc.output("dataurlstring");
 },
 	clickReportButton() {
-		const allData =  all_data.data;
-	  Text11.setText(JSON.stringify(allData));
-		//const dati = await this.datiGraduatoria(allData);
-		//let data2 = await this.pdfReport(dati);
-		//reportGraduatoria.setURL(data2);
-		//showModal(ModalGraduatoriaPdf.name);
-	},
-	showData() {
 	  const allData = all_data.data;
 		const dati = this.datiGraduatoria(allData);
-		Text11.setText(JSON.stringify(dati));
 		let data2 = this.pdfReport(dati);
 		reportGraduatoria.setURL(data2);
 		showModal(ModalGraduatoriaPdf.name);
