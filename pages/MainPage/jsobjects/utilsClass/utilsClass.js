@@ -210,8 +210,8 @@ async pdfReport() {
     return doc.output("dataurlstring");
 },
 	async clickReportButton() {
-		showModal(ModalGraduatoriaPdf.name);
 		let data2 = await utilsClass.pdfReport();
 		reportGraduatoria.setURL(data2);
+		showModal(ModalGraduatoriaPdf.name);
 	},
 }
