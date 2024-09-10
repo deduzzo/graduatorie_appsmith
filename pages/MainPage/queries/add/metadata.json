@@ -29,7 +29,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\n\t\"codice_fiscale\": {{codice_fiscale_txt.text.toUpperCase()}},\n\t\"cognome\": {{cognome_txt.text.toUpperCase()}},\n\t\"nome\": {{nome_txt.text.toUpperCase()}},\n\t\"data_nascita\": {{data_nascita_txt.selectedDate.substr(0,10)}},\n\t\"indirizzo\": {{indirizzo_txt.text}},\n\t\"citta\": {{citta_txt.text.toUpperCase()}}\n}"
+          "data": "{\n\t... utilsClass.getObjectOfCurrentRecord()\n}"
         },
         "sheetName": {
           "data": "test"
@@ -62,11 +62,7 @@
       "name": "graduatoria_base",
       "pluginId": "google-sheets-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.rowObjects.data"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "executeOnLoad": false,
     "name": "add",
     "pageId": "MainPage",

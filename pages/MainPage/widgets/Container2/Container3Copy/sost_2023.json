@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 25,
   "boxShadow": "none",
-  "defaultText": "{{elenco.selectedRow.servizio_2017}}",
+  "defaultText": "{{elenco.selectedRow.servizio_2023}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -34,13 +34,13 @@
   "isRequired": false,
   "isVisible": true,
   "key": "dzqdi6u7ef",
-  "label": "2017",
+  "label": "2023",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 35,
+  "leftColumn": 14,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minNum": "0",
@@ -56,12 +56,12 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 42,
+  "rightColumn": 21,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 11,
+  "topRow": 18,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "7vv0vrpmxx",
-  "widgetName": "Input4Copy5CopyCopy2CopyCopy2"
+  "widgetId": "c1dqd7bszq",
+  "widgetName": "sost_2023"
 }

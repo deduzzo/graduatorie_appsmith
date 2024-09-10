@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,
   "boxShadow": "none",
-  "defaultText": "{{elenco.selectedRow.servizio_2013}}",
+  "defaultText": "{{elenco.selectedRow.servizio_2012}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -34,13 +34,13 @@
   "isRequired": false,
   "isVisible": true,
   "key": "dzqdi6u7ef",
-  "label": "2013",
+  "label": "2012",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 7,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minNum": "0",
@@ -58,12 +58,12 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 14,
+  "rightColumn": 7,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "81tww5ewqo",
-  "widgetName": "Input4Copy5CopyCopy2"
+  "widgetId": "o142qcs6dd",
+  "widgetName": "sost_2012"
 }

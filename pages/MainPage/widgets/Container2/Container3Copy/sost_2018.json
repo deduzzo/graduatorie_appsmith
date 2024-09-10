@@ -3,33 +3,44 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 18,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{elenco.selectedRow.servizio_2018}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": true,
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "dzqdi6u7ef",
-  "label": "2024",
+  "label": "2018",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 21,
+  "leftColumn": 42,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minNum": "0",
@@ -39,20 +50,20 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 34,
-  "originalTopRow": 27,
+  "originalBottomRow": 18,
+  "originalTopRow": 11,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "mjjape63to",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 49,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 18,
+  "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "ysi1j7oljk",
-  "widgetName": "Input4Copy5CopyCopy2CopyCopyCopy3"
+  "widgetId": "kzu30a54s7",
+  "widgetName": "sost_2018"
 }

@@ -3,27 +3,38 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 18,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{elenco.selectedRow.servizio_2016}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": true,
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "dzqdi6u7ef",
-  "label": "2025",
+  "label": "2016",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
@@ -39,8 +50,6 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 34,
-  "originalTopRow": 27,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "mjjape63to",
   "parentRowSpace": 10,
@@ -50,9 +59,9 @@
   "rightColumn": 35,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 18,
+  "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "0hmewn2tra",
-  "widgetName": "Input4Copy5CopyCopy2CopyCopyCopy4"
+  "widgetId": "nnvbetkb0b",
+  "widgetName": "sost_2016"
 }

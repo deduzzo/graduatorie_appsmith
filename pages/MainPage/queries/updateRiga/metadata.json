@@ -29,7 +29,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{ \n {\n\t rowIndex: elenco.selectedRow.rowIndex,\n\t codice_fiscale: codice_fiscale_txt.text.toUpperCase(),\n\t cognome: cognome_txt.text.toUpperCase(),\n\t nome: nome_txt.text.toUpperCase(),\n\t data_nascita: data_nascita_txt.selectedDate.substr(0,10),\n\t indirizzo: indirizzo_txt.text.toUpperCase(),\n\t citta: citta_txt.text.toUpperCase(),\n\t branca: branca_cmb.selectedOptionValue,\n\t data_laurea : data_laurea_txt.selectedDate.substr(0,10),\n\t voto_laurea: voto_laurea.text,\n\t su_110: su100_sw.isSwitchedOn.toString().toUpperCase(),\n\t laurea_lode: laurea_lode_chk.isChecked.toString().toUpperCase(),\n\t data_specializzazione: data_specializzazione.selectedDate.substr(0,10),\n\t voto_spec_settantesimi: voto_spec_settantesimi_txt.text,\n\t spec_max_voti: spec_max_voti_chk.isChecked.toString().toUpperCase(),\n\t specializzazione_lode: prima_spec_lode_chk.isChecked.toString().toUpperCase(),\n\t spec_odontoiatria: spec_odontoiatria_chk.isChecked.toString().toUpperCase(),\n\t prima_spec_branca_principale: prima_spec_branca_chk.isChecked.toString().toUpperCase(),\n\t num_spec_branca_princip: num_ulteriori_spec_txt.text,\n\tseconda_spec_lode: altra_spec_lode_chk.isChecked.toString().toUpperCase(),\n\t pec: pec_txt.text.toLowerCase(),\n\t note: note_txt.text,\n\t servizio_2003: parseFloat(sost_2003.text.replace(\",\",\".\"))\n }\n}}"
+          "data": "{{  { \n\t\t\trowIndex: elenco.selectedRow.rowIndex,\n\t\t\t... utilsClass.getObjectOfCurrentRecord()\n\t\t}\n}}"
         },
         "sheetName": {
           "data": "base"

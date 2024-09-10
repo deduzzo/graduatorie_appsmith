@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 11,
   "boxShadow": "none",
-  "defaultText": "{{elenco.selectedRow.servizio_2015}}",
+  "defaultText": "{{elenco.selectedRow.servizio_2009}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -20,7 +20,7 @@
       "key": "isDisabled"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
@@ -34,13 +34,13 @@
   "isRequired": false,
   "isVisible": true,
   "key": "dzqdi6u7ef",
-  "label": "2015",
+  "label": "2009",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 21,
+  "leftColumn": 42,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minNum": "0",
@@ -50,20 +50,20 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 25,
-  "originalTopRow": 18,
+  "originalBottomRow": 11,
+  "originalTopRow": 4,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "mjjape63to",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 49,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 11,
+  "topRow": 4,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "enygzk15lm",
-  "widgetName": "Input4Copy5CopyCopy2CopyCopy"
+  "widgetId": "8ylx0ohlbg",
+  "widgetName": "sost_2009"
 }

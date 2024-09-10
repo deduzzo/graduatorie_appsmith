@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 18,
   "boxShadow": "none",
-  "defaultText": "{{elenco.selectedRow.servizio_2023}}",
+  "defaultText": "{{elenco.selectedRow.servizio_2014}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -34,7 +34,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "dzqdi6u7ef",
-  "label": "2023",
+  "label": "2014",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
@@ -50,6 +50,8 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
+  "originalBottomRow": 18,
+  "originalTopRow": 11,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "mjjape63to",
   "parentRowSpace": 10,
@@ -59,9 +61,9 @@
   "rightColumn": 21,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 18,
+  "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "c1dqd7bszq",
-  "widgetName": "Input4Copy5CopyCopy2CopyCopyCopy2"
+  "widgetId": "1249405h41",
+  "widgetName": "sost_2014"
 }

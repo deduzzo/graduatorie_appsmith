@@ -220,6 +220,7 @@ pdfReport(dati) {
 		return !error;
 	},
 	addNewRow() {
+		storeValue("TEMP_RECORD",utilsClass.getObjectOfCurrentRecord())
 		if (utilsClass.checkData()) {
 			add.run().then(() => {
   			showAlert('Specialista caricato correttamente', 'success');
@@ -241,4 +242,51 @@ pdfReport(dati) {
 		reportGraduatoria.setURL(data2);
 		showModal(ModalGraduatoriaPdf.name);
 	},
+	getObjectOfCurrentRecord() {
+		return  {
+			 codice_fiscale: codice_fiscale_txt.text.toUpperCase(),
+			 cognome: cognome_txt.text.toUpperCase(),
+			 nome: nome_txt.text.toUpperCase(),
+			 data_nascita: data_nascita_txt.selectedDate.substr(0,10),
+			 indirizzo: indirizzo_txt.text.toUpperCase(),
+			 citta: citta_txt.text.toUpperCase(),
+			 branca: branca_cmb.selectedOptionValue,
+			 data_laurea : data_laurea_txt.selectedDate.substr(0,10),
+			 voto_laurea: voto_laurea.text,
+			 su_110: su100_sw.isSwitchedOn.toString().toUpperCase(),
+			 laurea_lode: laurea_lode_chk.isChecked.toString().toUpperCase(),
+			 data_specializzazione: data_specializzazione.selectedDate.substr(0,10),
+			 voto_spec_settantesimi: voto_spec_settantesimi_txt.text,
+			 spec_max_voti: spec_max_voti_chk.isChecked.toString().toUpperCase(),
+			 specializzazione_lode: prima_spec_lode_chk.isChecked.toString().toUpperCase(),
+			 spec_odontoiatria: spec_odontoiatria_chk.isChecked.toString().toUpperCase(),
+			 prima_spec_branca_principale: prima_spec_branca_chk.isChecked.toString().toUpperCase(),
+			 num_spec_branca_princip: num_ulteriori_spec_txt.text,
+			seconda_spec_lode: altra_spec_lode_chk.isChecked.toString().toUpperCase(),
+			 pec: pec_txt.text.toLowerCase(),
+			 note: note_txt.text,
+			 servizio_2003: parseFloat(sost_2003.text.replace(",",".")),
+			 servizio_2004: parseFloat(sost_2004.text.replace(",",".")),
+			 servizio_2005: parseFloat(sost_2005.text.replace(",",".")),
+			 servizio_2006: parseFloat(sost_2006.text.replace(",",".")),
+			 servizio_2007: parseFloat(sost_2007.text.replace(",",".")),
+			 servizio_2008: parseFloat(sost_2008.text.replace(",",".")),
+			 servizio_2009: parseFloat(sost_2009.text.replace(",",".")),
+			 servizio_2010: parseFloat(sost_2010.text.replace(",",".")),
+			 servizio_2011: parseFloat(sost_2011.text.replace(",",".")),
+			 servizio_2012: parseFloat(sost_2012.text.replace(",",".")),
+			 servizio_2013: parseFloat(sost_2013.text.replace(",",".")),
+			 servizio_2014: parseFloat(sost_2014.text.replace(",",".")),
+			 servizio_2015: parseFloat(sost_2015.text.replace(",",".")),
+			 servizio_2016: parseFloat(sost_2016.text.replace(",",".")),
+			 servizio_2017: parseFloat(sost_2017.text.replace(",",".")),
+			 servizio_2018: parseFloat(sost_2018.text.replace(",",".")),
+			 servizio_2019: parseFloat(sost_2019.text.replace(",",".")),
+			 servizio_2020: parseFloat(sost_2020.text.replace(",",".")),
+			 servizio_2021: parseFloat(sost_2021.text.replace(",",".")),
+			 servizio_2022: parseFloat(sost_2022.text.replace(",",".")),
+			 servizio_2023: parseFloat(sost_2023.text.replace(",",".")),
+			 servizio_2024: parseFloat(sost_2024.text.replace(",",".")),
+ 		}
+	}
 }
