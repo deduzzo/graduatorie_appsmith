@@ -15,7 +15,16 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": true,
@@ -39,6 +48,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
+  "onTextChanged": "{{ utilsClass.soloNumeriVirgola(sost_2024)}}",
   "originalBottomRow": 34,
   "originalTopRow": 27,
   "parentColumnSpace": 6.8319091796875,

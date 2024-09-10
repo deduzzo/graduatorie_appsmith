@@ -11,8 +11,14 @@ export default {
 	},
 	
 	updateRiga() {
-		if (this.verificaDati())
-			updateRiga.run();
+		if (this.verificaDati()) {
+						updateRiga.run().then(() => {
+  					showAlert('Dati aggiornati correttamente', 'success');
+  					all_data.run();
+				});
+		}
+		else 
+			showAlert("Verificare i dati inseriti", "error");
 	},
 	
 	aggiungiRiga() {
@@ -26,14 +32,6 @@ export default {
 	},
 	
 	verificaDati () {
-	  this.errore = ""
-		if (!cognome_txt.isValid)
-			this.errore += "Cognome obbligatorio. "
-		if (this.errore !== "") {
-			showModal(Modal1.name);
-			return false;
-		}
-		else 
 			return true;
 	}
 }

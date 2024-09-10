@@ -29,7 +29,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\n\t... utilsClass.getObjectOfCurrentRecord()\n}"
+          "data": "{{utilsClass.getObjectOfCurrentRecord()}}"
         },
         "sheetName": {
           "data": "test"
@@ -62,7 +62,11 @@
       "name": "graduatoria_base",
       "pluginId": "google-sheets-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.rowObjects.data"
+      }
+    ],
     "executeOnLoad": false,
     "name": "add",
     "pageId": "MainPage",

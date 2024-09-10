@@ -24,9 +24,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onTextChanged"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": "{{utilsClass.campoDisabilitato()}}",
@@ -50,9 +57,11 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
+  "onTextChanged": "{{ utilsClass.soloNumeriVirgola(sost_2003)}}",
   "parentColumnSpace": 6.8319091796875,
   "parentId": "mjjape63to",
   "parentRowSpace": 10,
+  "regex": "",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",

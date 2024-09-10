@@ -29,10 +29,10 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{  { \n\t\t\trowIndex: elenco.selectedRow.rowIndex,\n\t\t\t... utilsClass.getObjectOfCurrentRecord()\n\t\t}\n}}"
+          "data": "{{utilsClass.getObjectOfCurrentRecord(true)}}"
         },
         "sheetName": {
-          "data": "base"
+          "data": "test"
         },
         "sheetUrl": {
           "componentData": "",

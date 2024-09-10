@@ -24,9 +24,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onTextChanged"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": "{{utilsClass.campoDisabilitato()}}",
@@ -50,6 +57,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
+  "onTextChanged": "{{ utilsClass.soloNumeriVirgola(sost_2018)}}",
   "originalBottomRow": 18,
   "originalTopRow": 11,
   "parentColumnSpace": 6.8319091796875,

@@ -15,11 +15,20 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -28,7 +37,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{elenco.isAddRowInProgress || elenco.selectedRow.rowIndex ==\"\"}}",
   "isLoading": false,
   "isVisible": "{{!elenco.isAddRowInProgress && elenco.selectedRow.rowIndex !==\"\"}}",
   "key": "ifqqat5pnf",
