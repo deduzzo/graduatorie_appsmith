@@ -213,6 +213,27 @@ pdfReport(dati) {
 
     return doc.output("dataurlstring");
 },
+	checkData() {
+		let error = false;
+		if (branca_cmb.selectedOptionValue === "")
+			error = true;
+		return !error;
+	},
+	addNewRow() {
+		if (utilsClass.checkData()) {
+			add.run().then(() => {
+  			showAlert('Specialista caricato correttamente', 'success');
+  			all_data.run();
+				});
+		}
+		else
+		{
+			showAlert('Verificare i dati', 'warning');
+		}
+	},
+	campoDisabilitato() {
+		return (elenco.selectedRow.rowIndex === "" && !elenco.isAddRowInProgress)
+	},
 	clickReportButton() {
 	  const allData = all_data.data;
 		const dati = this.datiGraduatoria(allData);

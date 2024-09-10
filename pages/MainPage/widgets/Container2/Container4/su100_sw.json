@@ -11,6 +11,9 @@
     },
     {
       "key": "defaultSwitchState"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -20,6 +23,9 @@
     },
     {
       "key": "onChange"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -27,7 +33,7 @@
       "key": "onChange"
     }
   ],
-  "isDisabled": false,
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isVisible": true,
   "key": "e470iqr6i0",

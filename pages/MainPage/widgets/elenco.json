@@ -259,6 +259,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onAddNewRowSave"
     }
   ],
   "dynamicTriggerPathList": [
@@ -267,6 +270,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onAddNewRowSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -277,7 +283,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "bnxq9zdido",
@@ -289,6 +295,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
+  "onAddNewRowDiscard": "{{}}",
+  "onAddNewRowSave": "{{\nutilsClass.addNewRow() }}",
   "onRowSelected": "",
   "originalBottomRow": 29,
   "originalTopRow": 1,

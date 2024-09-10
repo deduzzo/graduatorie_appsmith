@@ -23,6 +23,9 @@
     },
     {
       "key": "maxDate"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -35,11 +38,14 @@
     },
     {
       "key": "maxDate"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
   "firstDayOfWeek": 0,
-  "isDisabled": false,
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,

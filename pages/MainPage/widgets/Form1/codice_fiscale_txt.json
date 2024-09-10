@@ -14,10 +14,10 @@
       "key": "borderRadius"
     },
     {
-      "key": "isDisabled"
+      "key": "defaultText"
     },
     {
-      "key": "defaultText"
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -29,7 +29,7 @@
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": "{{ elenco.selectedRow.rowIndex === \"\" && !elenco.isAddRowInProgress}}",
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
@@ -57,7 +57,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 14,
+  "rightColumn": 22,
   "showStepArrows": false,
   "topRow": 1,
   "type": "INPUT_WIDGET_V2",

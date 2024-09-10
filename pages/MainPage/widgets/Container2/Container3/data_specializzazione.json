@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 19,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "DD/MM/YYYY",
@@ -23,6 +23,9 @@
     },
     {
       "key": "maxDate"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -35,11 +38,14 @@
     },
     {
       "key": "minDate"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
   "firstDayOfWeek": 0,
-  "isDisabled": false,
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
@@ -70,7 +76,7 @@
   "rightColumn": 21,
   "shortcuts": false,
   "timePrecision": "minute",
-  "topRow": 11,
+  "topRow": 12,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
   "widgetId": "zq9hnggkk7",

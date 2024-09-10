@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 12,
   "defaultCheckedState": "{{elenco.selectedRow.prima_spec_branca_principale.toLocaleLowerCase()}}",
   "dynamicBindingPathList": [
     {
@@ -14,16 +14,22 @@
     },
     {
       "key": "defaultCheckedState"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "defaultCheckedState"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
-  "isDisabled": false,
+  "isDisabled": "{{utilsClass.campoDisabilitato()}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
@@ -47,7 +53,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 29,
-  "topRow": 7,
+  "topRow": 8,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
   "widgetId": "2ocou2vwkx",
