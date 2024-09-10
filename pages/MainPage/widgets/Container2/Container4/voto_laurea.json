@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultText": "{{elenco.selectedRow.voto_laurea_110}}",
+  "defaultText": "{{elenco.selectedRow.voto_laurea}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
