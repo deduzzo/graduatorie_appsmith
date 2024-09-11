@@ -36,7 +36,7 @@
   "mobileTopRow": 34,
   "needsErrorInfo": false,
   "onClick": "{{\nmodalPunteggioTitolo.setText(\"Dettaglio punteggio \" + elenco.selectedRow.cognome + \" \" + elenco.selectedRow.nome)\nModalPunteggioCorpo.setText(utilsClass.calcolaPunteggio(elenco.selectedRow).descrizione)\n\nModalPunteggioTotale.setText(utilsClass.calcolaPunteggio(elenco.selectedRow).punteggio.toString())\n\nshowModal(ModalPunteggio.name)}}/",
-  "originalBottomRow": 38,
+  "originalBottomRow": 39,
   "originalTopRow": 34,
   "parentColumnSpace": 10.412109375,
   "parentId": "q9lmq3i1ag",
