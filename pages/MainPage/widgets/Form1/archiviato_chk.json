@@ -4,7 +4,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 34,
-  "defaultCheckedState": "{{elenco.selectedRow === \"TRUE\"}}",
+  "defaultCheckedState": "{{elenco.selectedRow.archiviato.toLocaleLowerCase()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

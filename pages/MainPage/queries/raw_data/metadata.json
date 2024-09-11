@@ -26,7 +26,7 @@
           "data": "RANGE"
         },
         "range": {
-          "data": "A2:AS"
+          "data": "A2:AT"
         },
         "sheetName": {
           "data": "test"

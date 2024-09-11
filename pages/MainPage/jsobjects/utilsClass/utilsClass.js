@@ -75,7 +75,7 @@ export default {
 			]
 		};
 		for (let i=0; i<allData.length; i++) {
-			if (allData[i].archiviato === "TRUE") {
+			if (allData[i].archiviato === "FALSE") {
 			if (!dati.hasOwnProperty(allData[i].branca))
 				dati[allData[i].branca] = [];
 			dati[allData[i].branca] = this.inserisciInGraduatoria(dati[allData[i].branca], allData[i]);
@@ -260,7 +260,7 @@ pdfReport(dati) {
 			 codice_fiscale: codice_fiscale_txt.text.toUpperCase(),
 			 cognome: cognome_txt.text.toUpperCase(),
 			 nome: nome_txt.text.toUpperCase(),
-			 archiviato: archiviato_chk.isChecked ? "TRUE" : "FALSE",
+			 archiviato: archiviato_chk.isChecked.toString().toUpperCase(),
 			 data_nascita: data_nascita_txt.selectedDate.substr(0,10),
 			 indirizzo: indirizzo_txt.text.toUpperCase(),
 			 citta: citta_txt.text.toUpperCase(),

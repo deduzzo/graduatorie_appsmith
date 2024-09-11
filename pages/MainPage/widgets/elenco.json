@@ -349,7 +349,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "stato",
+      "label": "archiviato",
       "menuItemsSource": "STATIC",
       "notation": "standard",
       "originalId": "archiviato",
