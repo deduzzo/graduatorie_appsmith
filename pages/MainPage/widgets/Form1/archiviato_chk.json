@@ -1,14 +1,11 @@
 {
-  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "accentColor": "#e15615",
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 34,
-  "defaultCheckedState": "{{elenco.selectedRow.archiviato.toLocaleLowerCase()}}",
+  "defaultCheckedState": "{{elenco.selectedRow.in_graduatoria === \"FALSE\"}}",
   "dynamicBindingPathList": [
-    {
-      "key": "accentColor"
-    },
     {
       "key": "borderRadius"
     },
@@ -27,19 +24,19 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "es20qp6t1l",
-  "label": "Archiviato",
+  "key": "rav694zfln",
+  "label": "Sospeso",
   "labelPosition": "Left",
   "labelStyle": "BOLD",
-  "labelTextColor": "#cf4d10",
+  "labelTextColor": "#e15615",
   "leftColumn": 50,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 41,
-  "mobileLeftColumn": 34,
-  "mobileRightColumn": 46,
-  "mobileTopRow": 37,
+  "mobileBottomRow": 34,
+  "mobileLeftColumn": 50,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 30,
   "needsErrorInfo": false,
   "originalBottomRow": 34,
   "originalTopRow": 30,
@@ -52,6 +49,6 @@
   "topRow": 30,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
-  "widgetId": "dygngeobpd",
+  "widgetId": "m8pcddy02u",
   "widgetName": "archiviato_chk"
 }

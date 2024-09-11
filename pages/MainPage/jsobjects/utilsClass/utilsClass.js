@@ -75,7 +75,7 @@ export default {
 			]
 		};
 		for (let i=0; i<allData.length; i++) {
-			if (allData[i].archiviato === "FALSE") {
+			if (allData[i].in_graduatoria === "TRUE") {
 			if (!dati.hasOwnProperty(allData[i].branca))
 				dati[allData[i].branca] = [];
 			dati[allData[i].branca] = this.inserisciInGraduatoria(dati[allData[i].branca], allData[i]);
@@ -260,18 +260,18 @@ pdfReport(dati) {
 			 codice_fiscale: codice_fiscale_txt.text.toUpperCase(),
 			 cognome: cognome_txt.text.toUpperCase(),
 			 nome: nome_txt.text.toUpperCase(),
-			 archiviato: archiviato_chk.isChecked.toString().toUpperCase(),
-			 data_nascita: data_nascita_txt.selectedDate.substr(0,10),
+			 in_graduatoria: archiviato_chk.isChecked ? "FALSE" : "TRUE",
+			 data_nascita: moment.tz(data_nascita_txt.selectedDate, 'Europe/Rome').format("YYYY-MM-DD"),
 			 indirizzo: indirizzo_txt.text.toUpperCase(),
 			 citta: citta_txt.text.toUpperCase(),
 			 cellulare: cellulare_txt.text,
 			 email: email_txt.text,
 			 branca: branca_cmb.selectedOptionValue,
-			 data_laurea : data_laurea_txt.selectedDate.substr(0,10),
+			 data_laurea :  moment.tz(data_laurea_txt.selectedDate, 'Europe/Rome').format("YYYY-MM-DD"),
 			 voto_laurea: voto_laurea.text,
 			 su_110: su100_sw.isSwitchedOn.toString().toUpperCase(),
 			 laurea_lode: laurea_lode_chk.isChecked.toString().toUpperCase(),
-			 data_specializzazione: data_specializzazione.selectedDate.substr(0,10),
+			 data_specializzazione: moment.tz(data_specializzazione.selectedDate, 'Europe/Rome').format("YYYY-MM-DD"),
 			 voto_spec_settantesimi: voto_spec_settantesimi_txt.text,
 			 spec_max_voti: spec_max_voti_chk.isChecked.toString().toUpperCase(),
 			 specializzazione_lode: prima_spec_lode_chk.isChecked.toString().toUpperCase(),
@@ -307,5 +307,12 @@ pdfReport(dati) {
 		if (addRowKey)
 			data = {...data, rowIndex: elenco.selectedRow.rowIndex}
 		return data;
-	}
+	},
+	setArchiviato(currentRow) {
+		currentRow.archiviato = (currentRow.archiviato  === "TRUE" ? "FALSE" : "TRUE");
+		updateRiga.run().then(() => {
+  			showAlert('Aggiornamento stato esecuito', 'success');
+  			all_data.run();
+				});
+	},
 }
