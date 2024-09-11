@@ -35,6 +35,7 @@
     "cognome",
     "nome",
     "data_nascita",
+    "archiviato",
     "branca",
     "customColumn1",
     "indirizzo",
@@ -80,7 +81,7 @@
     "spec_odontoiatria",
     "voto_laurea"
   ],
-  "columnUpdatedAt": 1725970016092,
+  "columnUpdatedAt": 1726043642397,
   "columnWidthMap": {
     "branca": 257,
     "customColumn1": 119,
@@ -254,6 +255,18 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.archiviato.computedValue"
+    },
+    {
+      "key": "primaryColumns.archiviato.iconName"
+    },
+    {
+      "key": "primaryColumns.archiviato.buttonColor"
+    },
+    {
+      "key": "primaryColumns.archiviato.buttonLabel"
     }
   ],
   "dynamicPropertyPathList": [
@@ -262,6 +275,12 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.archiviato.iconName"
+    },
+    {
+      "key": "primaryColumns.archiviato.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -303,6 +322,45 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "archiviato": {
+      "alias": "archiviato",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonColor": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow.archiviato === \"FALSE\" ? appsmith.theme.colors.primaryColor : \"#FF0000\" ))}}",
+      "buttonLabel": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow.archiviato === \"FALSE\" ? \"ATTIVO\" : \"ARCHIVIATO\"))}}",
+      "cellBackground": "",
+      "columnType": "button",
+      "computedValue": "{{elenco.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"archiviato\"]))}}",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "iconName": "{{elenco.processedTableData.map((currentRow, currentIndex) => (  ))}}",
+      "id": "archiviato",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "stato",
+      "menuItemsSource": "STATIC",
+      "notation": "standard",
+      "originalId": "archiviato",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "branca": {
       "alias": "branca",
       "allowCellWrapping": false,
