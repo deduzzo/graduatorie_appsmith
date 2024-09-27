@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 26,
+  "bottomRow": 55,
   "boxShadow": "none",
   "defaultText": "{{elenco.selectedRow.num_spec_branca_princip}}",
   "dynamicBindingPathList": [
@@ -62,7 +62,7 @@
   "rightColumn": 18,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 19,
+  "topRow": 48,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "yh7nzcjlq1",

@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 46,
   "defaultCheckedState": "{{elenco.selectedRow.laurea_lode.toLowerCase()}}",
   "dynamicBindingPathList": [
     {

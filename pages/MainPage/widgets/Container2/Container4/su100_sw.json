@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignWidget": "RIGHT",
   "animateLoading": true,
-  "bottomRow": 14,
+  "bottomRow": 60,
   "boxShadow": "none",
   "defaultSwitchState": "{{elenco.selectedRow.su_110.toLowerCase()}}",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 26,
-  "topRow": 10,
+  "topRow": 48,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "5tmg6ok257",

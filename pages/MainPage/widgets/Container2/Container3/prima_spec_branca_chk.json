@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 41,
   "defaultCheckedState": "{{elenco.selectedRow.prima_spec_branca_principale.toLocaleLowerCase()}}",
   "dynamicBindingPathList": [
     {

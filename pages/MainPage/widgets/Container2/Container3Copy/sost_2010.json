@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 18,
   "boxShadow": "none",
   "defaultText": "{{elenco.selectedRow.servizio_2010}}",
   "dynamicBindingPathList": [
@@ -69,7 +69,7 @@
   "rightColumn": 56,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 4,
+  "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "4o28uhqlyg",
