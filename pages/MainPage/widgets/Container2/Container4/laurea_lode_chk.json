@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 46,
+  "bottomRow": 7,
   "defaultCheckedState": "{{elenco.selectedRow.laurea_lode.toLowerCase()}}",
   "dynamicBindingPathList": [
     {
@@ -45,7 +45,7 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
+  "originalBottomRow": 46,
   "originalTopRow": 3,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "4ib3hcp1bq",

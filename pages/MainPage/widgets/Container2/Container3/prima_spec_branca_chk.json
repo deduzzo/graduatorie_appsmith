@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 41,
+  "bottomRow": 12,
   "defaultCheckedState": "{{elenco.selectedRow.prima_spec_branca_principale.toLocaleLowerCase()}}",
   "dynamicBindingPathList": [
     {
@@ -45,7 +45,7 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 12,
+  "originalBottomRow": 41,
   "originalTopRow": 8,
   "parentColumnSpace": 6.8319091796875,
   "parentId": "r40vnhmfqp",
