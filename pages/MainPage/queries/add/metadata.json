@@ -32,7 +32,9 @@
           "data": "{{utilsClass.getObjectOfCurrentRecord()}}"
         },
         "sheetName": {
-          "data": "test"
+          "componentData": "test",
+          "data": "{{anno_cmb.selectedOptionValue}}",
+          "viewType": "json"
         },
         "sheetUrl": {
           "componentData": "",
@@ -65,6 +67,9 @@
     "dynamicBindingPathList": [
       {
         "key": "formData.rowObjects.data"
+      },
+      {
+        "key": "formData.sheetName.data"
       }
     ],
     "executeOnLoad": false,

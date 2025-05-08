@@ -29,7 +29,9 @@
           "data": ""
         },
         "sheetName": {
-          "data": "test"
+          "componentData": "test",
+          "data": "{{anno_cmb.selectedOptionValue}}",
+          "viewType": "json"
         },
         "sheetUrl": {
           "componentData": "",

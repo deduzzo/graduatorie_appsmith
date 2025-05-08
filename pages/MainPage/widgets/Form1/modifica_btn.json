@@ -18,6 +18,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
     }
   ],
   "dynamicPropertyPathList": [
@@ -37,7 +40,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{elenco.isAddRowInProgress || elenco.selectedRow.rowIndex ==\"\"}}",
+  "isDisabled": "{{elenco.isAddRowInProgress || elenco.selectedRow.rowIndex ==\"\" || (anno_cmb.selectedOptionLabel && anno_cmb.selectedOptionLabel.toLowerCase().includes(\"chius\"))}}",
   "isLoading": false,
   "isVisible": "{{!elenco.isAddRowInProgress && elenco.selectedRow.rowIndex !==\"\"}}",
   "key": "ifqqat5pnf",
@@ -59,6 +62,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 62,
   "text": "Aggiorna dati",
+  "tooltip": "{{ (anno_cmb.selectedOptionLabel && anno_cmb.selectedOptionLabel.toLowerCase().includes(\"chius\")) ? \"GRADUATORIA CHIUSA\" : \"\"}}",
   "topRow": 34,
   "type": "BUTTON_WIDGET",
   "version": 1,

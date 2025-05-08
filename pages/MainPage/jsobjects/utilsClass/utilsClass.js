@@ -1,4 +1,7 @@
 export default {
+	aggiornaDati () {
+		all_data.run();
+	},
 	calcolaPunteggio (riga = currentRow) {
 		const annoMin = 2003;
 		const annoMax = 2026;
