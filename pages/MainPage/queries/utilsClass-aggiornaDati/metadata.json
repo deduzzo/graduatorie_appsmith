@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utilsClass.aggiornaDati",
     "name": "aggiornaDati",
     "pageId": "MainPage",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

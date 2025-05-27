@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "dati.updateRiga",
     "name": "updateRiga",
     "pageId": "MainPage",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

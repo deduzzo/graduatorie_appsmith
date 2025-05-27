@@ -28,10 +28,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utilsClass.calcolaPunteggio",
     "name": "calcolaPunteggio",
     "pageId": "MainPage",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

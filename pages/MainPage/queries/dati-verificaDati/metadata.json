@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "dati.verificaDati",
     "name": "verificaDati",
     "pageId": "MainPage",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -103,9 +103,9 @@
         "key": "formData.pagination.data.limit"
       }
     ],
-    "executeOnLoad": true,
     "name": "all_data",
     "pageId": "MainPage",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

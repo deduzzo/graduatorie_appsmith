@@ -72,9 +72,9 @@
         "key": "formData.sheetName.data"
       }
     ],
-    "executeOnLoad": false,
     "name": "add",
     "pageId": "MainPage",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

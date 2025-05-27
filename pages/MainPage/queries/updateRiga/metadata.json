@@ -71,9 +71,9 @@
         "key": "formData.sheetName.data"
       }
     ],
-    "executeOnLoad": false,
     "name": "updateRiga",
     "pageId": "MainPage",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
