@@ -21,7 +21,7 @@ export default {
 		
 		// SPECIALIZZAZIONE
 		// specializzazione / titolo di cui all'art. 19, comma 4, lett. d) punteggio 3,00
-		if (riga.data_specializzazione !== "") {
+		if (riga.prima_spec_branca_principale === "TRUE") {
 			punteggio+= 3;
 			descrizione+= "specializzazione / titolo di cui all'art. 19, comma 4, lett. d) -> +3 punti <br />";
 		}
