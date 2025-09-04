@@ -390,6 +390,7 @@ export default {
 			servizio_2022: sost_2022.text !== "" ? parseFloat(sost_2022.text.replace(",",".")).toFixed(2).replace(".",",") : "0,00",
 			servizio_2023: sost_2023.text !== "" ? parseFloat(sost_2023.text.replace(",",".")).toFixed(2).replace(".",",") : "0,00",
 			servizio_2024: sost_2024.text !== "" ? parseFloat(sost_2024.text.replace(",",".")).toFixed(2).replace(".",",") : "0,00",
+			servizio_2025: sost_2025.text !== "" ? parseFloat(sost_2025.text.replace(",",".")).toFixed(2).replace(".",",") : "0,00",
 		}
 		if (addRowKey)
 			data = {...data, rowIndex: elenco.selectedRow.rowIndex}
