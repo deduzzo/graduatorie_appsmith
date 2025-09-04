@@ -6,6 +6,27 @@
     "pageId": "MainPage",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "userData",
+        "value": "null"
+      },
+      {
+        "name": "firstLoadingOk",
+        "value": "false"
+      },
+      {
+        "name": "secret",
+        "value": "\"UxZ>69'[Tu<6\""
+      },
+      {
+        "name": "_verifyIntervalId",
+        "value": "null"
+      },
+      {
+        "name": "distrettiMap",
+        "value": "{\n  byUnique: {},\n  byId: {}\n}"
+      }
+    ]
   }
 }

@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66e12cd28a4ab04d533175b7_53e61150-16ad-45b8-ba28-66ca74576dc8",
+  "id": "LoginPage_loginFunctions",
+  "unpublishedCollection": {
+    "name": "loginFunctions",
+    "pageId": "LoginPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "defaultTab",
+        "value": "'Sign In'"
+      },
+      {
+        "name": "secret",
+        "value": "\"UxZ>69'[Tu<6\""
+      },
+      {
+        "name": "scope",
+        "value": "\"gradspec\""
+      }
+    ]
+  }
+}

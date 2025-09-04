@@ -32,11 +32,11 @@
   "icon": "hospital",
   "pages": [
     {
-      "id": "Authentication",
+      "id": "MainPage",
       "isDefault": false
     },
     {
-      "id": "MainPage",
+      "id": "LoginPage",
       "isDefault": true
     }
   ],
