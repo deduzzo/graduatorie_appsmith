@@ -100,7 +100,7 @@ export default {
 		// Voto di laurea da 101/110 a 110/110 o da 91/100 a 100/100 punteggio 2,00
 		if (riga.su_110 === "TRUE" && riga.voto_laurea >= 101 || riga.su_110 === "FALSE" && riga.voto_laurea >= 91) {
 			punteggio+= 2;
-			descrizione+= "Voto di laurea da 101/110 a 110/110 o da 91/100 a 100/100 -> +3 punti  <br />";
+			descrizione+= "Voto di laurea da 101/110 a 110/110 o da 91/100 a 100/100 -> +2 punti  <br />";
 		}
 
 		// SPECIALIZZAZIONE
