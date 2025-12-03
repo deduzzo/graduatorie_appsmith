@@ -157,7 +157,7 @@ export default {
 	datiGraduatoria(allData, mostraSoloVeterinari = false) {
 		let dati = {};
 		for (let i=0; i<allData.length; i++) {
-			if (allData[i].in_graduatoria === "TRUE" && (!mostraSoloVeterinari || (this.brancheVeterinarie.includes(allData[i].branca)))) {
+			if (allData[i].in_graduatoria === "TRUE" && ((!mostraSoloVeterinari && !this.brancheVeterinarie.includes(allData[i].branca)) || (mostraSoloVeterinari && this.brancheVeterinarie.includes(allData[i].branca)))) {
 				if (!dati.hasOwnProperty(allData[i].branca))
 					dati[allData[i].branca] = [];
 				dati[allData[i].branca] = this.inserisciInGraduatoria(dati[allData[i].branca], allData[i]);
