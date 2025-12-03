@@ -9,6 +9,10 @@
       "jsArguments": [
         {
           "name": "allData"
+        },
+        {
+          "name": "mostraSoloVeterinari",
+          "value": "{{false}}"
         }
       ],
       "paginationType": "NONE",

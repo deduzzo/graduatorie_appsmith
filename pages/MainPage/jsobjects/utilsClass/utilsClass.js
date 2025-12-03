@@ -4,6 +4,11 @@ export default {
 	secret: "UxZ>69'[Tu<6",
 	_verifyIntervalId: null, // <- ID del setInterval
 	distrettiMap: { byUnique: {}, byId: {} },
+	brancheVeterinarie: [
+		"SANITA' ANIMALE",
+		"IGIENE ALIMENTI ORIGINE ANIMALE",
+		"IGIENE DEGLI ALLEVAMENTI PROD. ZOOT."
+	],
 	async initLoad() {
 		showModal(caricamentoMdl.name);
 		this.firstLoadingOk = false;
@@ -149,20 +154,10 @@ export default {
 		return parseFloat(dato.replace(",","."));
 	},
 
-	datiGraduatoria(allData) {
+	datiGraduatoria(allData, mostraSoloVeterinari = false) {
 		let dati = {};
-		let dati2 = {
-			"Allergologia": [
-				{ numero: 1, punteggio: 85, cognome: "Rossi", nome: "Mario",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment() },
-				{ numero: 2, punteggio: 80, cognome: "Bianchi", nome: "Luca",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment()  }
-			],
-			"Audiologia": [
-				{ numero: 1, punteggio: 90, cognome: "Verdi", nome: "Giulia",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment()  },
-				{ numero: 2, punteggio: 88, cognome: "Neri", nome: "Anna",data_specializzazione: moment(), data_laurea: moment(), data_nascita: moment()  }
-			]
-		};
 		for (let i=0; i<allData.length; i++) {
-			if (allData[i].in_graduatoria === "TRUE") {
+			if (allData[i].in_graduatoria === "TRUE" && (!mostraSoloVeterinari || (this.brancheVeterinarie.includes(allData[i].branca)))) {
 				if (!dati.hasOwnProperty(allData[i].branca))
 					dati[allData[i].branca] = [];
 				dati[allData[i].branca] = this.inserisciInGraduatoria(dati[allData[i].branca], allData[i]);
@@ -326,7 +321,7 @@ export default {
 	},
 	clickReportButton() {
 		const allData = all_data.data;
-		const dati = this.datiGraduatoria(allData);
+		const dati = this.datiGraduatoria(allData,soloVeterinari.isChecked);
 		let data2 = this.pdfReport(dati);
 		reportGraduatoria.setURL(data2);
 		showModal(ModalGraduatoriaPdf.name);

@@ -26,6 +26,10 @@
       {
         "name": "distrettiMap",
         "value": "{\n  byUnique: {},\n  byId: {}\n}"
+      },
+      {
+        "name": "brancheVeterinarie",
+        "value": "[\"SANITA' ANIMALE\", \"IGIENE ALIMENTI ORIGINE ANIMALE\", \"IGIENE DEGLI ALLEVAMENTI PROD. ZOOT.\"]"
       }
     ]
   }
