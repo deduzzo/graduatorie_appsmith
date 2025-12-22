@@ -398,4 +398,65 @@ export default {
 			all_data.run();
 		});
 	},
+	excelReport(dati) {
+    const wb = xlsx.utils.book_new();
+    const sheetData = [];
+    
+    // Titolo principale
+    sheetData.push(['Graduatoria Specialistica']);
+    sheetData.push([`Generato il ${moment().format('DD/MM/YYYY HH:mm')}`]);
+    sheetData.push([]); // Riga vuota
+    
+    // Per ogni branca
+    Object.keys(dati).forEach((branca, idx) => {
+        // Nome della branca come intestazione di sezione
+        sheetData.push([branca]);
+        
+        // Header della tabella
+        sheetData.push(['#POS', 'Cognome e Nome', 'Punteggio', 'Note']);
+        
+        // Dati della graduatoria
+        let index = 1;
+        dati[branca].forEach(item => {
+            sheetData.push([
+                index,
+                `${item.cognome} ${item.nome}`,
+                item.punteggio,
+                item.note || ''
+            ]);
+            index++;
+        });
+        
+        // Riga vuota tra le branche (tranne dopo l'ultima)
+        if (idx < Object.keys(dati).length - 1) {
+            sheetData.push([]);
+        }
+    });
+    
+    // Crea il foglio
+    const ws = xlsx.utils.aoa_to_sheet(sheetData);
+    
+    // Imposta larghezza colonne
+    ws['!cols'] = [
+        { wch: 8 },   // #POS
+        { wch: 35 },  // Cognome e Nome
+        { wch: 12 },  // Punteggio
+        { wch: 45 }   // Note
+    ];
+    
+    // Aggiungi il foglio al workbook
+    xlsx.utils.book_append_sheet(wb, ws, 'Graduatoria');
+    
+    // Genera come base64 e scarica
+    const wbout = xlsx.write(wb, { bookType: 'xlsx', type: 'base64' });
+    const dataUrl = `data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,${wbout}`;
+    download(dataUrl, `Graduatoria_${moment().format('YYYY-MM-DD_HHmm')}.xlsx`);
+},
+
+clickReportExcelButton() {
+    const allData = all_data.data;
+    const dati = this.datiGraduatoria(allData, soloVeterinari.isChecked);
+    this.excelReport(dati);
+    showAlert('File Excel generato con successo', 'success');
+},
 }
