@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 6,
   "boxShadow": "none",
-  "defaultOptionValue": "2026",
+  "defaultOptionValue": "2027",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -55,7 +55,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 27,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"anno\": \"2024\",\n    \"desc\": \"2024 CHIUSA\"\n  },\n  {\n    \"anno\": \"2025\",\n    \"desc\": \"2025 CHIUSA\"\n  },\n  {\n    \"anno\": \"2026\",\n    \"desc\": \"2026\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"anno\": \"2024\",\n    \"desc\": \"2024 CHIUSA\"\n  },\n  {\n    \"anno\": \"2025\",\n    \"desc\": \"2025 CHIUSA\"\n  },\n  {\n    \"anno\": \"2026\",\n    \"desc\": \"2026 CHIUSA\"\n  },\n\t{\n    \"anno\": \"2027\",\n    \"desc\": \"2026 CHIUSA\"\n  }\n]",
   "topRow": 2,
   "type": "SELECT_WIDGET",
   "version": 1,
