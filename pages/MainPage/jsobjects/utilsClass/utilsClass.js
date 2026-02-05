@@ -232,6 +232,7 @@ export default {
 			data_laurea:  moment(specialista.data_laurea,"YYYY-MM-DD"),
 			data_nascita:  moment(specialista.data_nascita,"YYYY-MM-DD"),
 			pec: specialista.pec,
+			cellulare: specialista.cellulare,
 			note: "",
 		}
 		return [...lista, tempData];
@@ -415,7 +416,7 @@ export default {
         sheetData.push([branca]);
         
         // Header della tabella
-        sheetData.push(['#POS', 'Cognome e Nome', 'Punteggio', 'PEC', 'Note']);
+        sheetData.push(['#POS', 'Cognome e Nome', 'Punteggio', 'PEC', 'Cellulare', 'Note']);
         
         // Dati della graduatoria
         let index = 1;
@@ -425,6 +426,7 @@ export default {
                 `${item.cognome} ${item.nome}`,
                 item.punteggio,
 								item.pec,
+							  item.cellulare,
                 item.note || ''
             ]);
             index++;
@@ -445,6 +447,7 @@ export default {
         { wch: 35 },  // Cognome e Nome
         { wch: 12 },  // Punteggio
 			  { wch: 35 },  // PEC
+			  { wch: 20 },  // PEC
         { wch: 45 }   // Note
     ];
     
